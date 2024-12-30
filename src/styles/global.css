@@ -4,3 +4,7 @@
 
 @import url("https://use.typekit.net/qid4ajk.css");
 
+.slick-prev:before,
+.slick-next:before {
+  color: black!important;
+}
