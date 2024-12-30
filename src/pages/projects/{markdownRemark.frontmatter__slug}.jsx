@@ -43,6 +43,7 @@ export default function ProjectTemplate({ data }) {
                   <GatsbyImage
                     imgStyle={{
                       objectFit: "none",
+                      display: "block",
                       }}
                     className="m-auto block"
                     image={imageData}
