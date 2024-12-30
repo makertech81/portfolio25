@@ -44,7 +44,7 @@ export default function ProjectTemplate({ data }) {
                     imgStyle={{
                       objectFit: "none",
                       }}
-                    className="mx-auto block"
+                    className="m-auto block"
                     image={imageData}
                     alt={`Project Image ${index + 1}`}
                   />
