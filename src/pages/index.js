@@ -6,34 +6,33 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
+
 const IndexPage = () => (
-<div class="max-w-5xl mx-auto py-7 px-10">
+<div class="max-w-5xl mx-auto py-3.5 px-10">
    <Layout>
-      <div class="flex justify-between flex-wrap">
+      <div class="grid grid-cols-2 md:grid-cols-3 md:gap-6 gap-4">
          <div class="flex flex-col">
-            <img class="object-cover h-72 w-72" src="https://images.squarespace-cdn.com/content/v1/5269e87de4b0f35a9eff7300/1454544022501-89PXBS8TQ94H0EQPW34I/msa.jpg" />
+            <img class="object-cover aspect-square h-full w-full" src="https://images.squarespace-cdn.com/content/v1/5269e87de4b0f35a9eff7300/1454544022501-89PXBS8TQ94H0EQPW34I/msa.jpg" />
             <p class="text-center text-sm">Maritime Surveilence Aircraft</p>
          </div>
          <div class="flex flex-col">
-            <img class="object-cover h-72 w-72" src="https://images.squarespace-cdn.com/content/v1/5269e87de4b0f35a9eff7300/1454544022501-89PXBS8TQ94H0EQPW34I/msa.jpg" />
+            <img class="object-cover aspect-square h-full w-full" src="https://images.squarespace-cdn.com/content/v1/5269e87de4b0f35a9eff7300/1454544022501-89PXBS8TQ94H0EQPW34I/msa.jpg" />
             <p class="text-center text-sm">Maritime Surveilence Aircraft</p>
          </div>
          <div class="flex flex-col">
-            <img class="object-cover h-72 w-72" src="https://images.squarespace-cdn.com/content/v1/5269e87de4b0f35a9eff7300/1454544022501-89PXBS8TQ94H0EQPW34I/msa.jpg" />
-            <p class="text-center text-sm">Maritime Surveilence Aircraft</p>
-         </div>
-      </div>
-      <div class="flex justify-between flex-wrap">
-         <div class="flex flex-col">
-            <img class="object-cover h-72 w-72" src="https://images.squarespace-cdn.com/content/v1/5269e87de4b0f35a9eff7300/1454544022501-89PXBS8TQ94H0EQPW34I/msa.jpg" />
+            <img class="object-cover aspect-square h-full w-full" src="https://images.squarespace-cdn.com/content/v1/5269e87de4b0f35a9eff7300/1454544022501-89PXBS8TQ94H0EQPW34I/msa.jpg" />
             <p class="text-center text-sm">Maritime Surveilence Aircraft</p>
          </div>
          <div class="flex flex-col">
-            <img class="object-cover h-72 w-72" src="https://images.squarespace-cdn.com/content/v1/5269e87de4b0f35a9eff7300/1454544022501-89PXBS8TQ94H0EQPW34I/msa.jpg" />
+            <img class="object-cover aspect-square h-full w-full" src="https://images.squarespace-cdn.com/content/v1/5269e87de4b0f35a9eff7300/1454544022501-89PXBS8TQ94H0EQPW34I/msa.jpg" />
             <p class="text-center text-sm">Maritime Surveilence Aircraft</p>
          </div>
          <div class="flex flex-col">
-            <img class="object-cover h-72 w-72" src="https://images.squarespace-cdn.com/content/v1/5269e87de4b0f35a9eff7300/1454544022501-89PXBS8TQ94H0EQPW34I/msa.jpg" />
+            <img class="object-cover aspect-square h-full w-full" src="https://images.squarespace-cdn.com/content/v1/5269e87de4b0f35a9eff7300/1454544022501-89PXBS8TQ94H0EQPW34I/msa.jpg" />
+            <p class="text-center text-sm">Maritime Surveilence Aircraft</p>
+         </div>
+         <div class="flex flex-col">
+            <img class="object-cover aspect-square h-full w-full" src="https://images.squarespace-cdn.com/content/v1/5269e87de4b0f35a9eff7300/1454544022501-89PXBS8TQ94H0EQPW34I/msa.jpg" />
             <p class="text-center text-sm">Maritime Surveilence Aircraft</p>
          </div>
       </div>
