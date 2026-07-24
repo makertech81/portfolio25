@@ -31,12 +31,19 @@ const IndexPage = ({data}) => (
 <div class="max-w-5xl mx-auto py-3.5 px-10">
    <Layout page={1}>
       <div class="grid grid-cols-2 md:grid-cols-3 md:gap-6 gap-4">
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-         <a class="flex flex-col" href={`/projects/${node.frontmatter.slug}`}>
-            <GatsbyImage className="!object-cover !aspect-square !h-full !w-full" image={getImage(node.frontmatter.featuredImage?.childImageSharp?.gatsbyImageData)} />
-            <p class="text-center text-sm text-gray-800 pt-2 -mb-2">{node.frontmatter.title}</p>
-         </a>
-         ))}
+        {data.allMarkdownRemark.edges.map(({ node }) => {
+          const featuredImg = getImage(node.frontmatter.featuredImage?.childImageSharp?.gatsbyImageData)
+          return (
+            <a class="flex flex-col" href={`/projects/${node.frontmatter.slug}`}>
+              {featuredImg ? (
+                <GatsbyImage className="!object-cover !aspect-square !h-full !w-full" image={featuredImg} />
+              ) : (
+                <div class="!aspect-square !h-full !w-full bg-gray-200" />
+              )}
+              <p class="text-center text-sm text-gray-800 pt-2 -mb-2">{node.frontmatter.title}</p>
+            </a>
+          )
+        })}
       </div>
    </Layout>
 </div>
