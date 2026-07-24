@@ -17,8 +17,10 @@ export default function ProjectTemplate({ data }) {
 
   // Get images from the specified folder
   const imageFolder = frontmatter.imageFolder // Folder path from markdown
-  const images = data.allFile.nodes;
-  console.log(images);
+  const folderName = imageFolder?.replace("../images/", "").replace(/\/$/, "")
+  const images = data.allFile.nodes.filter(node =>
+    node.relativePath.startsWith(`${folderName}/`)
+  )
   // Slick carousel settings
   const settings = {
     dots: true,
@@ -56,6 +58,22 @@ export default function ProjectTemplate({ data }) {
         )}
 
         <div className="pt-10" dangerouslySetInnerHTML={{ __html: html }} />
+
+        {frontmatter.links?.length > 0 && (
+          <div className="pt-6 flex flex-wrap gap-4 justify-center">
+            {frontmatter.links.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        )}
       </Layout>
     </div>
   )
@@ -68,6 +86,10 @@ export const pageQuery = graphql`
       frontmatter {
         title
         imageFolder
+        links {
+          label
+          url
+        }
         featuredImage {
           childImageSharp {
             gatsbyImageData(layout: FIXED)
